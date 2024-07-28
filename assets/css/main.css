@@ -4109,3 +4109,59 @@ input, select, textarea {
 					}
 
 	}
+
+	.project-cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: center; /* Center the cards */
+		margin-top: 20px;
+	}
+	
+	.card {
+		background: #333; /* Dark background color to match the theme */
+		border: 2px solid #ff66b2; /* Rose pink border */
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		width: 300px; /* Fixed width for all cards */
+		max-width: 300px;
+		overflow: hidden;
+		color: #fff; /* White text color for contrast */
+		transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* Smooth transition for hover effects */
+	}
+	
+	.card:hover {
+		transform: scale(1.05); /* Slight zoom on hover */
+		box-shadow: 0 0 20px #ff66b2, 0 0 30px #ff66b2, 0 0 40px #ff66b2; /* Enhanced neon effect on hover */
+		border-color: #ff66b2; /* Ensure the border color remains rose pink */
+	}
+	
+	.card-image {
+		width: 100%;
+		height: 200px;
+		object-fit: fill; /* Stretch the image to fill the card */
+	}
+	
+	.card-content {
+		padding: 15px;
+	}
+	
+	.card-content h3 {
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-size: 1.25em;
+		color: #ff66b2; /* Rose pink color for the headings */
+	}
+	
+	.card-content p {
+		margin: 0;
+		color: #ddd; /* Light gray color for the text */
+	}
+	
+	@media (max-width: 1200px) {
+		.project-cards {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	
